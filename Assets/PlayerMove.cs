@@ -7,9 +7,8 @@ public class PlayerMove : MonoBehaviour
     Vector3 _movementInput,
             _orientationInput;
 
-    public float _speed,
-                 smooth = 5.0f,
-                 tiltAngle = 60.0f;
+    public float _speed;
+                 
 
     
     void Awake()
@@ -26,15 +25,11 @@ public class PlayerMove : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal"),
               vertical = Input.GetAxisRaw("Vertical"),
-              tiltAroundZ = Input.GetAxis("Horizontal") * tiltAngle,
-              tiltAroundX = Input.GetAxis("Vertical") * tiltAngle,
               mouseX = Input.GetAxis("Mouse X"),
               mouseY = Input.GetAxis("Mouse Y");
 
         _movementInput = new Vector3(horizontal, 0, vertical).normalized;
         
-        Quaternion target = Quaternion.Euler(tiltAroundX, tiltAroundZ,0 );
-        transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * smooth);
         _orientationInput = new Vector2(mouseX, mouseY);
     }
 

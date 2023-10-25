@@ -117,11 +117,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1311233417379961535}
   - component: {fileID: 6514195818009648006}
-  - component: {fileID: 515159589727729235}
+  - component: {fileID: 3012430322056496610}
   - component: {fileID: 3693587692989631044}
+  - component: {fileID: -3472326703805437780}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,11 +166,11 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!75 &515159589727729235
+--- !u!75 &3012430322056496610
 ConstantForce:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,7 +179,7 @@ ConstantForce:
   m_GameObject: {fileID: 3990332985741108517}
   m_Enabled: 1
   m_Force: {x: 0, y: 0, z: 0}
-  m_RelativeForce: {x: 0, y: 0, z: 0}
+  m_RelativeForce: {x: 0, y: 0, z: 60}
   m_Torque: {x: 0, y: 0, z: 0}
   m_RelativeTorque: {x: 0, y: 0, z: 0}
 --- !u!114 &3693587692989631044
@@ -193,6 +194,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaeb5b5902c0064419c8e4d05c18ee8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bulletTransform: {fileID: 0}
-  _bulletRigidbody: {fileID: 0}
+  _bulletTransform: {fileID: 1311233417379961535}
+  _bulletRigidbody: {fileID: 6514195818009648006}
   _bulletSpeed: 0
+--- !u!114 &-3472326703805437780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3990332985741108517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdc987a4e0761f44af4909720024995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

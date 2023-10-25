@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class EnemyWalker : MonoBehaviour
 {
-    public Transform _playerTransform;
-
-    /*public float _*/
+    public Transform _playerTransform,
+                     _enemyTransform;
 
     void Start()
     {
@@ -19,13 +18,20 @@ public class EnemyWalker : MonoBehaviour
     }
     void Awake()
     {
-        _transform = GetComponent<Transform>();
+        transform.position = GetComponent<Transform>().position;
+    }
+
+    void FixedUpdate()
+    {
+        TurnTowardsPlayer();
     }
 
     void TurnTowardsPlayer()
     {
+        Vector3 dir = _playerTransform.forward;
+        Quaternion dirRotate = Quaternion.LookRotation(dir, Vector3.up);
+        Quaternion Rotate = Quaternion.RotateTowards(transform.rotation, dirRotate, 0.5f);
 
+        _enemyTransform.rotation = Rotate;
     }
-
-    private Transform _transform;
 }
