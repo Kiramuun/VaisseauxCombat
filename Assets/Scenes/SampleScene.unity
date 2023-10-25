@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3923355
 Transform:
   m_ObjectHideFlags: 0
@@ -5961,6 +5961,11 @@ PrefabInstance:
       propertyPath: _particleSystem
       value: 
       objectReference: {fileID: 3923357}
+    - target: {fileID: 5979941601398260150, guid: 5ac7c36c737870340a8dfad719857ce7,
+        type: 3}
+      propertyPath: _particleExplosion
+      value: 
+      objectReference: {fileID: 3923354}
     - target: {fileID: 6388902273030494356, guid: 5ac7c36c737870340a8dfad719857ce7,
         type: 3}
       propertyPath: m_UseGravity

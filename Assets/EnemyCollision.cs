@@ -6,7 +6,7 @@ public class EnemyCollision : MonoBehaviour
 {
     public int PdV;
     public AudioSource _audioSource;
-    public ParticleSystem _particleSystem;
+    public GameObject _particleExplosion;
 
     
 
@@ -32,7 +32,6 @@ public class EnemyCollision : MonoBehaviour
             PdV--;
             if (PdV == 0)
             {
-                _particleSystem.Play();
                 Destroy(gameObject);
             }
         }
