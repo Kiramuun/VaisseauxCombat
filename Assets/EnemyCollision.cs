@@ -32,7 +32,8 @@ public class EnemyCollision : MonoBehaviour
             PdV--;
             if (PdV == 0)
             {
-                Destroy(gameObject);
+                _particleExplosion.SetActive(true);
+                if (PdV == 0) { Destroy(gameObject); }
             }
         }
     }
