@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour
 
         _movementInput = new Vector3(horizontal, 0, vertical).normalized;
         
-        _orientationInput = new Vector2(mouseX, mouseY);
+        _orientationInput = new Vector3(mouseX,0, mouseY);
     }
 
     void LateUpdate()
