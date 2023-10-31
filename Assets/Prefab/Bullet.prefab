@@ -196,7 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _bulletTransform: {fileID: 1311233417379961535}
   _bulletRigidbody: {fileID: 6514195818009648006}
-  _bulletSpeed: 0
+  _bulletSpeed: 2
 --- !u!114 &-3472326703805437780
 MonoBehaviour:
   m_ObjectHideFlags: 0
