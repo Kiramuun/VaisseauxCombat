@@ -6646,7 +6646,7 @@ MonoBehaviour:
   _cannon: {fileID: 30133610}
   _groupBullets: {fileID: 533950317}
   _bulletSpeed: 5
-  _delayBetweenShots: 0.01
+  _delayBetweenShots: 0.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

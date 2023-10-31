@@ -33,8 +33,7 @@ public class PlayerShoot : MonoBehaviour
         bool pressButton = Input.GetButton("Shoot");
         if (pressButton)
         {
-            if (Time.time >= _nextShotTime) { FireBullet(); } else { _nextShotTime = _nextShotTime + _delayBetweenShots; }
-            if (pressButton) { _audioSource.Play(); }
+            if (Time.time >= _nextShotTime) { FireBullet(); } 
         }
     }
 
@@ -44,5 +43,7 @@ public class PlayerShoot : MonoBehaviour
         newBullet.transform.parent = _groupBullets;
         Bullet b = newBullet.GetComponent<Bullet>();
         b.Shoot(_bulletSpeed);
+        _nextShotTime = Time.time + _delayBetweenShots;
+        _audioSource.Play();
     }
 }
